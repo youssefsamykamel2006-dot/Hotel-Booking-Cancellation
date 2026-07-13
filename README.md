@@ -66,15 +66,19 @@ Hotel-Booking-Cancellation/
 │   └── app.py
 │
 ├── data/
+│   ├── hotel_bookings.csv
+│   ├── hotel_bookings_cleaned.csv
 │   └── hotel_bookings_final.csv
 │
 ├── models/
 │   └── best_xgboost_model.pkl
 │
 ├── notebooks/
+│   ├── Anaylsis.ipynb
+│   ├── Machine_Learning.ipynb
+│   └── Deployment.ipynb
 │
 ├── requirements.txt
-│
 └── README.md
 ```
 
