@@ -39,23 +39,21 @@ st.set_page_config(
 # 3. Load Dataset
 # ==================================================
 
-from pathlib import Path
-import pandas as pd
-import joblib
-import streamlit as st
-
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-DATA_PATH = BASE_DIR / "data" / "hotel_bookings_final.csv"
-MODEL_PATH = BASE_DIR / "models" / "best_xgboost_model.pkl"
-
 @st.cache_data
 def load_data():
-    return pd.read_csv(DATA_PATH)
+
+    df = pd.read_csv("hotel_bookings_final.csv")
+
+    return df
+
 
 @st.cache_resource
 def load_model():
-    return joblib.load(MODEL_PATH)  
+
+    model = joblib.load("best_xgboost_model.pkl")
+
+    return model
+
 
 df = load_data()
 
